@@ -25,6 +25,15 @@ Make sure you have [rust](https://www.rust-lang.org/) installed on your machine 
 * Run the application `cargo run`
 * Test the application `cargo test`
 
+#### Example input of run:
+
+```rust
+let arr: [i32; 20] = [
+    1, 10, 20, 47, 59, 63, 75, 88, 99, 107, 120, 133, 155, 162, 176, 188, 199, 200, 210, 222,
+];
+let target: i32 = 88;
+```
+
 #### Example output of run:
 
 ```
