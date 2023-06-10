@@ -44,8 +44,20 @@ Found 88 at index 7 of the array.
 
 ```
 running 2 tests
-test tests::assert_value_is_not_found ... ok
 test tests::assert_value_is_found ... ok
+test tests::assert_value_is_not_found ... ok
 
-test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+# Docker Setup
+
+Build
+```
+docker build --rm -f Dockerfile -t thomaschaplin:rust-binary-search .
+```
+
+Run
+```
+docker run --rm -it thomaschaplin:rust-binary-search
 ```

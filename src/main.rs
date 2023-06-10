@@ -23,15 +23,15 @@ fn binary_search(arr: &[i32], target_value: &i32) -> Option<usize> {
     None
 }
 
-fn log_binary_search_result(arr: &[i32], target_value: &i32) -> () {
-    if let Some(result) = binary_search(&arr, &target_value) {
+fn log_binary_search_result(arr: &[i32], target_value: &i32) {
+    if let Some(result) = binary_search(arr, target_value) {
         println!("Found {} at index {} of the array.", target_value, result);
     } else {
         println!("{} was not found in the array.", target_value);
     }
 }
 
-fn main() -> () {
+fn main() {
     let arr: [i32; 20] = [
         1, 10, 20, 47, 59, 63, 75, 88, 99, 107, 120, 133, 155, 162, 176, 188, 199, 200, 210, 222,
     ];
@@ -63,8 +63,8 @@ mod tests {
         let unsorted_arr = [
             2, 22, 48, 58, 61, 73, 84, 90, 100, 119, 132, 154, 160, 177, 187, 197, 201, 211, 2242,
         ];
-        for i in 0..unsorted_arr.len() {
-            assert_eq!(None, binary_search(&sorted_arr, &unsorted_arr[i]));
+        for i in unsorted_arr {
+            assert_eq!(None, binary_search(&sorted_arr, &i));
         }
     }
 }
